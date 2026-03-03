@@ -1,9 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { FaGift } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
+import image8 from '../assets/images/image8.jpeg';
 
 const Surprise = () => {
+  const [showGift, setShowGift] = useState(false);
+
   useEffect(() => {
     // Trigger confetti on load
     const duration = 3000;
@@ -55,7 +59,10 @@ const Surprise = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={triggerConfetti}
+          onClick={() => {
+            triggerConfetti();
+            setShowGift(true);
+          }}
           className="bg-pink-500 hover:bg-pink-600 text-white text-2xl px-10 py-5 rounded-full shadow-2xl border-2 border-pink-300 transition-all"
         >
           <FaGift className="inline mr-2" /> Open Gift
@@ -75,6 +82,32 @@ const Surprise = () => {
           </p>
         </motion.div>
       </motion.div>
+
+      {showGift && (
+        <div
+          className="fixed inset-0 z-50 w-screen h-[100dvh] bg-rose-950/85 backdrop-blur-md"
+          onClick={() => setShowGift(false)}
+        >
+          <button
+            onClick={() => setShowGift(false)}
+            className="absolute top-4 right-4 z-50 rounded-full bg-white/20 p-3 text-white hover:bg-white/30 hover:text-amber-200"
+            aria-label="Close"
+            type="button"
+          >
+            <FaTimes />
+          </button>
+          <div
+            className="h-full w-full flex items-center justify-center p-3 sm:p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={image8}
+              alt="Gift"
+              className="h-full w-full max-w-[100dvw] max-h-[100dvh] object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

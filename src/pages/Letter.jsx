@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const letterText = `My Dearest Love,
 
-Today marks the day the universe gifted me the most precious person in my life. 
+Today marks the day the universe gifted me the most precious person in my life.
 
 Every moment with you is a treasure. Your laughter is my favorite song, and your smile is my greatest achievement.
 
@@ -25,22 +25,22 @@ const Letter = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-rose-600 via-fuchsia-600 to-amber-400 flex items-center justify-center p-4 sm:p-6 relative overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="max-w-2xl w-full glass p-8 md:p-12 rounded-2xl shadow-2xl border-t border-pink-500/30 relative z-10"
+        className="max-w-2xl w-full glass p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl border-t border-white/30 relative z-10"
       >
-        <h1 className="font-romantic text-4xl md:text-5xl text-pink-400 mb-6 text-center">
+        <h1 className="font-romantic text-3xl sm:text-4xl md:text-5xl text-white drop-shadow mb-5 sm:mb-6 text-center">
           For You ❤️
         </h1>
-        <div className="text-gray-200 text-lg md:text-xl leading-relaxed font-light whitespace-pre-wrap">
+        <div className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed sm:leading-loose font-light whitespace-pre-wrap">
           {displayedText}
           <span className="animate-pulse">|</span>
         </div>
         <div className="mt-8 text-center">
-          <p className="text-pink-300 text-sm">Forever Yours</p>
+          <p className="text-white/70 text-sm">Forever Yours</p>
         </div>
       </motion.div>
     </div>

@@ -8,7 +8,13 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  background: #0f172a; /* Fallback */
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff6ea8 0%, #ff7a59 50%, #ffd166 100%);
+  background-attachment: fixed;
+}
+
+#root {
+  color: inherit;
 }
 
 /* Custom Scrollbar */
