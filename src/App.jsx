@@ -4,7 +4,7 @@ import FloatingHearts from './components/FloatingHearts';
 import BackgroundMusic from './components/BackgroundMusic';
 import Home from './pages/Home';
 import Memories from './pages/Memories';
-import Letter from './pages/letter';
+import Letter from './pages/Letter';
 import Reasons from './pages/Reasons';
 import Surprise from './pages/Surprise';
 
