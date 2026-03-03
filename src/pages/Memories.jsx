@@ -64,7 +64,7 @@ const Memories = () => {
             Our Memories
           </motion.h1>
           <p className="mt-3 text-white max-w-2xl mx-auto text-sm sm:text-base">
-            snapshots of our favorite moments. Tap any photo to relive it.
+            snapshots of our favorite moments..
           </p>
         </div>
 
